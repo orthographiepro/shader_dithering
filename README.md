@@ -6,6 +6,7 @@ Simple Minecraft Shader to implement Ordered Dithering.
 * https://github.com/sp614x/optifine/tree/master/OptiFineDoc/doc
 * https://pastebin.com/aB5MJ7aN
 * https://en.wikipedia.org/wiki/Ordered_dithering
+* https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742
 
 ## Ideas / TODOs:
 * dither GUI
