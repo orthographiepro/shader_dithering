@@ -1,7 +1,9 @@
 
 Simple Minecraft Shader to implement Dithering as seen in The Return of the Obra Dinn by Lucas Pope.
 To use, just zip the shaders Folder into your OptiFine Shaders Folder.
-The Bayer Folder implements ordered Dithering, with 
+
+The Bayer Folder implements ordered Dithering. 
+"shaders" in the working directory currently implements blue noise dithering.
 
 ## Resources:
 * https://wiki.shaderlabs.org/wiki/Getting_Started
