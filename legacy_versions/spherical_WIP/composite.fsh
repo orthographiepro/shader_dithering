@@ -21,12 +21,13 @@ void main() {
 	vec3 color = texture2D(gcolor, texcoord).rgb;
 	float luminance = color.r * 0.21 + color.g * 0.72 + color.b * 0.07;
 
+	
 	float x_offset = (viewWidth) * (acos(normalize(vaPosition - cameraPosition).x)/(3.14159));
 	float y_offset = (viewHeight) * (acos(normalize(vaPosition - cameraPosition).y)/(3.14159));
 	vec2 offset_position = vec2(mod(gl_FragCoord.x + x_offset, viewWidth), mod(gl_FragCoord.y + y_offset, viewHeight));
-	vec2 fragment_location = vec2(ivec2(gl_FragCoord.xy) % 512) / 512.0; 
+	vec2 fragment_location = vec2(ivec2(offset_position) % 512) / 512.0; 
 	
-	float dithering_threshold = texture(colortex1, fragment_location).x;
+	float dithering_threshold = texture(colortex2, offset_position / vec2(viewWidth, viewHeight)).x;
 
 	color = light; 
 	if (luminance < dithering_threshold) color = dark;	
